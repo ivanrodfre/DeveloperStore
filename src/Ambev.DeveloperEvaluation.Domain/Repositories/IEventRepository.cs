@@ -13,6 +13,6 @@ public interface IEventRepository
     /// <param name="eventMessage">The event to create</param>
     /// <param name="cancellationToken">Cancellation token</param>
     /// <returns>The created event</returns>
-    Task<Event> CreateAsync(Event eventMessage, CancellationToken cancellationToken = default);
+    Task<EventMessage> CreateAsync(EventMessage eventMessage, CancellationToken cancellationToken = default);
    
 }

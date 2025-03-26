@@ -1,19 +1,19 @@
 ﻿using Ambev.DeveloperEvaluation.Domain.Entities.Sales;
 using Ambev.DeveloperEvaluation.Domain.Repositories;
 using Ambev.DeveloperEvaluation.Domain.Services;
-using Newtonsoft.Json;
-using Rebus.Bus;
 
 namespace Ambev.DeveloperEvaluation.Application.Services
 {
     public class SaleService : ISaleService
     {
-        private readonly IBus _bus;
+        //private readonly IBus _bus;
         private readonly IEventRepository _eventRepository;
 
-        public SaleService(IBus bus, IEventRepository eventRepository)
+        public SaleService(
+            //IBus bus, 
+            IEventRepository eventRepository)
         {
-            _bus = bus;
+            //_bus = bus;
             _eventRepository = eventRepository;
         }
 
@@ -28,7 +28,7 @@ namespace Ambev.DeveloperEvaluation.Application.Services
             //}
             //sale.ClearDomainEvents();
 
-            var evento = new Event(saleId, customerMessage);
+            var evento = new EventMessage(saleId, customerMessage);
 
             await _eventRepository.CreateAsync(evento);
 

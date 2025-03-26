@@ -14,7 +14,7 @@ namespace Ambev.DeveloperEvaluation.ORM.Repositories
 
         
 
-        public async Task<Event> CreateAsync(Event eventMessage, CancellationToken cancellationToken = default)
+        public async Task<EventMessage> CreateAsync(EventMessage eventMessage, CancellationToken cancellationToken = default)
         {
             await _context.Events.AddAsync(eventMessage, cancellationToken);
             await _context.SaveChangesAsync(cancellationToken);

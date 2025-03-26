@@ -10,6 +10,7 @@ using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 
+
 namespace Ambev.DeveloperEvaluation.WebApi;
 
 public class Program
@@ -62,6 +63,7 @@ public class Program
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+
 
             app.UseHttpsRedirection();
 
