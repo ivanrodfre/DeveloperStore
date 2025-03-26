@@ -7,6 +7,10 @@ namespace Ambev.DeveloperEvaluation.Domain.Entities.Sales
         public Guid SaleId { get; set; }
         public string EventMessageItem { get; set; }
 
+        public EventMessage()
+        {
+            Id = Guid.NewGuid();
+        }
 
         public EventMessage(Guid saleId, string eventMessage)
         {

@@ -10,7 +10,7 @@ namespace Ambev.DeveloperEvaluation.ORM.Mapping
         {
             builder.ToTable("Events");
             builder.HasKey(s => s.Id);
-            builder.Property(u => u.Id).HasColumnType("uuid").ValueGeneratedNever();
+            builder.Property(u => u.Id).HasColumnType("uuid");
 
         }
     }
